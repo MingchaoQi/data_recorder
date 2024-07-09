@@ -30,13 +30,13 @@ class SimpleBagRecorder(Node):
 
         topic_info = rosbag2_py._storage.TopicMetadata(
             name='topic_recorder',
-            type='std_msgs/msg/String',
+            type='lbr_fri_idl/msg/LBRJointPositionCommand',
             serialization_format='cdr')
         self.writer.create_topic(topic_info)
 
         self.subscription = self.create_subscription(
-            String,
-            '/lbr/command/LBRJointPositionCommand',
+            LBRJointPositionCommand,
+            '/lbr/command/joint_position',
             self.topic_callback,
             10)
         self.subscription
