@@ -23,6 +23,7 @@ setup(
             "topic_recorder = data_recorder.topic_recorder:main",
             "multi_topic_recorder_vector = data_recorder.multi_topic_recorder_vector:main",
             "multi_topic_recorder_image = data_recorder.multi_topic_recorder_image:main",
+            "dataset_recorder = data_recorder.dataset_recorder:main"
         ],
     },
 )
